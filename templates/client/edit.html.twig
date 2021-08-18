@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Client{% endblock %}
+
+{% block body %}
+    <div class="container">
+    
+    <h1>EDITER UN CLIENT</h1>
+    
+    <div class="container d-flex justify-content-center">
+        <p>{{ include('client/_form.html.twig', {'button_label': 'Modifier'}) }}</p>
+    </div>
+    
+    {# <div class="floatright"> #}
+    <div class="container">
+        <p>{{ include('client/_delete_form.html.twig') }}</p>
+    </div>
+
+    </div>
+
+    
+{% endblock %}

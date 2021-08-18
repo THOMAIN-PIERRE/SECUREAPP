@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    {# <div class="container bg-info">
+    <div class="row"></div>
+
+    <h1>Register</h1>
+
+    {{ form_start(registrationForm) }}
+        <div class="col-md-5"></div>
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn-primary" style="font-weight: bold;">M'ENREGISTRER</button>
+    {{ form_end(registrationForm) }}
+    </div>
+    </div> #}
+
+
+    <div class="container mb-5">
+    <h1 class="my-5">INSCRIPTION</h1>
+
+    {{form_start(registrationForm)}}
+    
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="alert alert-primary m-auto">
+                
+            <p>{{ form_row(registrationForm.username) }}</p>
+            <p>{{ form_row(registrationForm.plainPassword, {label: 'Password'}) }}</p>
+            <p class="mt-4">{{ form_row(registrationForm.agreeTerms) }}</p>
+            <div class="mt-5">
+                <button type="submit" class="btn-success p-2 m-auto" style="font-weight: bold;">JE M'INSCRIS</button>
+            </div>
+    {{ form_end(registrationForm) }}
+
+            {# <div class="mt-1 mb-2">
+                <button type="submit"><a href="" class="btn btn-primary text-light"><strong>Conditions générales d'utilisation</strong></a></button>
+                <button type="submit"><a href="" class="btn btn-primary text-light"><strong>Politique de confidentialité</strong></a></button>
+                <p class="mt-3">* : champs requis</p>
+            </div>
+            </div>
+            <div class="alert alert-dark">
+                <p>Cliquez pour nous rejoindre !</p>
+                <button type="submit" class="btn btn-success"><i class="fas fa-check"></i><b> Je m'inscris !</b></button> #}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
